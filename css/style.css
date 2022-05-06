@@ -16,6 +16,12 @@
   font-weight: bold;
 }
 
+.normal {
+  color: #000000;
+  font-weight: bold;
+}
+
+
 .total {
   font-weight: bold;
   font-size: 2em;
