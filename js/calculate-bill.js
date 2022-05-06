@@ -38,21 +38,26 @@ function calculateBtnClicked(){
     
     //round to two decimals
     var roundedBillTotal = billTotal.toFixed(2);
-    billTotalElement.innerHTML = roundedBillTotal;
+   // billTotalElement.innerHTML = roundedBillTotal;
 
-    if (billTotal < 20.00  ) {
+    billTotalElement.classList.remove("warning")
+    billTotalElement.classList.remove("danger")
 
-        billTotalElement.classList.add("normal");}
+    if (billTotal >= 30.00  ) {
 
-        else if (billTotal >= 20.00 && billTotal <= 30.00) {
+        billTotalElement.classList.add("danger");}
+
+        else if (billTotal >= 20.00 && billTotal < 30.00) {
             billTotalElement.classList.add('warning')
         }
-        else if (billTotal >= 30){
 
-            billTotalElement.classList.add('danger')
+        // else if (billTotal >= 30){
+
+        //     billTotalElement.classList.add('danger')
 
 
-        }
+        // }
+        billTotalElement.innerHTML = roundedBillTotal;
 }
 
 
